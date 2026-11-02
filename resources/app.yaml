@@ -1,0 +1,13 @@
+command:
+  - uvicorn
+  - server:app
+  - --host
+  - 0.0.0.0
+  - --port
+  - "8000"
+# Placeholders are filled in by mcp-relay at deploy time.
+env:
+  - name: RELAY_SECRET
+    value: "{{RELAY_SECRET}}"
+  - name: MCP_ALLOWED_ORIGINS
+    value: "{{MCP_ALLOWED_ORIGINS}}"
